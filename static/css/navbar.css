@@ -6,6 +6,7 @@
 /* Center the navbar horizontally */
 .navbar-list {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     gap: 16px;
     list-style: none;
