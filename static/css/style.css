@@ -24,10 +24,14 @@ main {
     padding: 30px;
 }
 
-h2 {
+main h2 {
     color: #383838;
     font-size: 28px;
     margin-bottom: 10px;
+}
+main p {
+    color: #000;
+    font-size: 18px;
 }
 
 footer {
@@ -41,5 +45,3 @@ footer {
     color: #888888;
     font-size: 14px;;
 }
-
-

@@ -1,28 +1,34 @@
 
-.main-navbar {
+.nav {
+    list-style: none;   
     margin: 10px 0;
     text-align: center;
-}
-/* Center the navbar horizontally */
-.navbar-list {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     justify-content: center;
-    gap: 16px;
-    list-style: none;
-    padding: 0;
+    gap: 30px;
     margin: 0;
+    padding: 0;
 }
 
 
-.navbar-link {
+@media (max-width: 600px) {
+    .nav {
+        flex-direction: column;
+        gap: 10px
+    }
+}
+
+
+
+.nav a {
 	color: #18272F;
     position: relative;
     text-decoration: none;
     font-size: 26px;
 }
 
-.navbar-link::before {
+.nav a::before {
     content: '';
     position: absolute;
     width: 100%;
@@ -36,7 +42,7 @@
     transition: transform .3s ease-in-out;
 }
 
-.navbar-link:hover::before {
+.nav a:hover::before {
     transform-origin: left;
     transform: scaleX(1);
 }
