@@ -1,5 +1,5 @@
 
-.nav {
+ul.nav {
     list-style: none;   
     margin: 10px 0;
     text-align: center;
@@ -13,7 +13,7 @@
 
 
 @media (max-width: 600px) {
-    .nav {
+    ul.nav {
         flex-direction: column;
         gap: 10px
     }
@@ -21,14 +21,14 @@
 
 
 
-.nav a {
+ul.nav a {
 	color: #18272F;
     position: relative;
     text-decoration: none;
     font-size: 26px;
 }
 
-.nav a::before {
+ul.nav a::before {
     content: '';
     position: absolute;
     width: 100%;
@@ -42,7 +42,7 @@
     transition: transform .3s ease-in-out;
 }
 
-.nav a:hover::before {
+ul.nav a:hover::before {
     transform-origin: left;
     transform: scaleX(1);
 }
