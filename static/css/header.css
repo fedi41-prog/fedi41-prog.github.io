@@ -55,6 +55,13 @@ ul.nav {
     .header-flex {
         gap: 10px;
     }
+    .header-left {
+        flex-direction: column;
+        gap: 2px;
+    }
+    .header-flex .logo {
+        width: 110px;
+    }
 }
 
 
