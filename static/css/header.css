@@ -23,7 +23,7 @@ header {
 }
 
 .header-flex .name-header {
-    font-size: 40px;
+    font-size: 46px;
 }
 
 /* Logo sizing */
@@ -63,7 +63,7 @@ ul.nav a {
 	color: #18272F;
     position: relative;
     text-decoration: none;
-    font-size: 26px;
+    font-size: 32px;
 }
 
 ul.nav a::before {
