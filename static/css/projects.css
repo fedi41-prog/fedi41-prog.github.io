@@ -48,3 +48,27 @@
 .project-card a:hover {
   background: #005ad1;
 }
+
+.project-image {
+    width: var(--width, auto);
+    height: auto;
+    max-width: 100%;     
+    object-fit: contain;  
+    border-radius: 12px;
+    margin-top: 20px;
+}
+
+.tech {
+      font-size: 1.1rem;
+      color: #666;
+      margin-bottom: 15px;
+    }
+
+.tech span {
+  background: #e0e7ff;
+  color: #334155;
+  padding: 4px 8px;
+  border-radius: 6px;
+  margin-right: 6px;
+  display: inline-block;
+}
