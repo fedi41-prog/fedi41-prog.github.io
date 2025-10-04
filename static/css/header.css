@@ -13,14 +13,14 @@ header {
 .header-flex {
     display: flex;
     align-items: center;
-    gap: 20px;
+    gap: 30px;
     margin: 0 auto;
     padding: 0 20px;
 }
 
 /* Logo sizing */
 .header-flex .logo {
-    width: 80px;
+    width: 90px;
     height: auto;
     display: block;
 } 
@@ -42,6 +42,9 @@ ul.nav {
     ul.nav {
         flex-direction: column;
         gap: 10px
+    }
+    .header-flex {
+        gap: 10px;
     }
 }
 
