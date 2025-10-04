@@ -5,8 +5,11 @@ header {
     text-align: center;
     margin: 0;
 }
-.name-header {
-    font-size: 40px;
+
+.header-left {
+    display: flex;
+    align-items: center;
+    gap: 20px;
 }
 
 /* New: layout header content in a row */
@@ -14,8 +17,13 @@ header {
     display: flex;
     align-items: center;
     gap: 30px;
+    justify-content: space-between;
     margin: 0 auto;
     padding: 0 20px;
+}
+
+.header-flex .name-header {
+    font-size: 40px;
 }
 
 /* Logo sizing */
@@ -41,7 +49,8 @@ ul.nav {
 @media (max-width: 700px) {
     ul.nav {
         flex-direction: column;
-        gap: 10px
+        gap: 10px;
+
     }
     .header-flex {
         gap: 10px;

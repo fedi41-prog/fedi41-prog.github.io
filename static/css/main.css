@@ -12,3 +12,8 @@ main p {
     color: #000;
     font-size: 18px;
 }
+main a {
+    color: #1a73e8;
+    text-decoration: none;
+    transition: text-decoration 0.3s;
+}
