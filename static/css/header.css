@@ -27,7 +27,7 @@ header {
 }
 
 /* Logo sizing */
-.header-flex .logo {
+#logo {
     width: 90px;
     height: auto;
     display: block;
@@ -59,7 +59,7 @@ ul.nav {
         flex-direction: column;
         gap: 0;;
     }
-    .header-flex .logo {
+    #logo {
         width: 110px;
     }
     .header-flex .name-header {
