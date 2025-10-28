@@ -59,10 +59,10 @@
 }
 
 .tech {
-      font-size: 1.1rem;
-      color: #666;
-      margin-bottom: 15px;
-    }
+  font-size: 1.1rem;
+  color: #666;
+  margin-bottom: 15px;
+}
 
 .tech span {
   background: #e0e7ff;
@@ -71,6 +71,10 @@
   border-radius: 6px;
   margin-right: 6px;
   display: inline-block;
+}
+.tech span:hover {
+  background: #c7d2fe;
+  color: #1e3a8a;
 }
 
 .link-button {
@@ -81,6 +85,16 @@
   padding: 8px 14px;
   border-radius: 6px;
   transition: background 0.2s ease;
+}
+.link-button:hover {
+  background: #444c56;
+}
+.header-link {
+  text-decoration: none;
+  color: inherit;
+}
+.header-link:hover {
+  color:#7c7f83;
 }
 
 @media (max-width: 600px) {
