@@ -1,47 +1,100 @@
-
 document.addEventListener("DOMContentLoaded", function() {
-    const logo = document.getElementById("logo");
+  const logo = document.getElementById("logo");
 
-    const duration = 2000;      // 4 Sekunden
-    const totalRotation = 360;  // 2 volle Umdrehungen
-    let animating = false;      // verhindert Doppelstarts
+  let rotation = 0;
+  let speed = 0;
+  let accelerating = false;
+  let animating = false;
+  let holdStart = null;
+  let easterEggTriggered = false;
 
-    // Sanfte Beschleunigungs-/Abbremskurve
-    function easeInOutCubic(t) {
-      return t < 0.5 ? 4 * t * t * t : 1 - Math.pow(-2 * t + 2, 3) / 2;
+  // Smooth easing, optional für Auslaufen
+  function easeOutCubic(t) {
+    return 1 - Math.pow(1 - t, 3);
+  }
+
+  function triggerEasterEgg() {
+    console.log("🎉 Easter Egg!");
+    // hier kannst du dein Easter Egg einbauen
+    // z.B.:
+    // alert("Secret unlocked!");
+  }
+
+  function animate() {
+    if (!animating) return;
+    rotation += speed;
+    logo.style.transform = `rotate(${rotation}deg)`;
+    requestAnimationFrame(animate);
+  }
+
+  function startSpin() {
+    if (animating) return;
+    animating = true;
+    requestAnimationFrame(animate);
+  }
+
+  function stopSpin() {
+    // sanft abbremsen
+    const initialSpeed = speed;
+    const duration = 1000;
+    const start = performance.now();
+
+    function decelerate(timestamp) {
+      const progress = Math.min((timestamp - start) / duration, 1);
+      const eased = easeOutCubic(progress);
+      speed = initialSpeed * (1 - eased);
+      rotation += speed;
+      logo.style.transform = `rotate(${rotation}deg)`;
+
+      if (progress < 1) {
+        requestAnimationFrame(decelerate);
+      } else {
+        animating = false;
+        speed = 0;
+      }
     }
 
-    function rotateOnce() {
-      if (animating) return; // wenn schon läuft → nichts tun
-      animating = true;
+    requestAnimationFrame(decelerate);
+  }
 
-      let start = null;
+  if (logo) {
+    logo.addEventListener("mousedown", () => {
+      accelerating = true;
+      holdStart = performance.now();
+      easterEggTriggered = false;
 
-      function animate(timestamp) {
-        if (!start) start = timestamp;
-        const elapsed = timestamp - start;
-        const progress = Math.min(elapsed / duration, 1);
-        const eased = easeInOutCubic(progress);
+      // Beschleunigungsschleife
+      function accelerateLoop() {
+        if (!accelerating) return;
+        if (!animating) startSpin();
 
-        const angle = totalRotation * eased;
-        logo.style.transform = `rotate(${angle}deg)`;
+        // Geschwindigkeitszuwachs mit Limit
+        speed = Math.min(speed + 0.06, 30);
 
-        if (progress < 1) {
-          requestAnimationFrame(animate);
-        } else {
-          animating = false; // nach Ende wieder freigeben
+        // Prüfen auf Easter Egg
+        const heldFor = performance.now() - holdStart;
+        if (heldFor >= 1000 && !easterEggTriggered) {
+          easterEggTriggered = true;
+          triggerEasterEgg();
         }
+
+        requestAnimationFrame(accelerateLoop);
       }
 
-      requestAnimationFrame(animate);
-    }
+      accelerateLoop();
+    });
 
+    logo.addEventListener("mouseup", () => {
+      accelerating = false;
+      stopSpin();
+    });
 
-    
-
-    if (logo) {
-        logo.addEventListener("click", () => {
-            rotateOnce();
-        });
-    }
-});    
+    logo.addEventListener("mouseleave", () => {
+      // Falls man die Maus rausbewegt, abbremsen
+      if (accelerating) {
+        accelerating = false;
+        stopSpin();
+      }
+    });
+  }
+});
