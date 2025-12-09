@@ -58,7 +58,7 @@ ul.nav {
     .header-left {
         flex-direction: column;
         gap: 0;;
-    }
+    } 
     #logo {
         width: 110px;
     }

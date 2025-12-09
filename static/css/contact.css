@@ -1,0 +1,12 @@
+.contact-link img {
+    width: 80px;
+    height: 80px;
+    margin: 0 15px;
+}
+.contact-link img:hover {
+    transform: scale(1.1);
+}
+.contact-link {
+    transition: transform 0.2s ease;
+    display: inline-block;
+}
