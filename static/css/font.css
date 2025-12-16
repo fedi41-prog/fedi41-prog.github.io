@@ -1,0 +1,15 @@
+
+* {
+    font-family: 'Open Sans', monospace;
+    color: green;
+}
+
+
+bold {
+  font-weight: 700;
+}
+
+italic {
+  font-style: italic;
+}
+
