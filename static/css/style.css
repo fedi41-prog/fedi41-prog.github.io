@@ -1,29 +1,118 @@
+@import url('https://fonts.googleapis.com/css2?family=Azeret+Mono:ital,wght@0,100..900;1,100..900&display=swap');
 
-html {
-    font-size: 20px;
+:root {
+    --purple: #bc13fe;
+    --light-green: #35fc3f;
+    --dark-green: #010a01;
+    --blue-gray: #9DB5B2;
 }
 
 body {
-    font-family: 'Open Sans', monospace;
-    background-color: black;
+    font-family: "Azeret Mono", Arial, sans-serif;
     margin: 0;
     padding: 0;
+    background-color: black;
 }
 
-#console {
-    font-family: 'Courier New', Courier, monospace;
-    background-color: #000000;
-    color: green;
-    padding: 5px;
-    border-radius: 3px;
+.flex-vertical {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
 
-    font-weight: 450;
+.white {
+    color: white;
+}
+.round {
+    border-radius: 50%;
+}
+.centered {
+    text-align: center;
+}
+.margin-top-large {
+    margin-top: 10em;
+}
 
-    font-size: 2em;
-
-    text-shadow: 
-        0 0 5px #00FF00,
-        0 0 20px #00FF00;
+.glow-text {
+    text-shadow: 0 0 4px greenyellow;
+                
+}
+.glow {
+    box-shadow: 0 0 .2rem white,
+            0 0 .2rem white,
+            0 0 2rem ,
+            0 0 0.8rem var(--purple),
+            0 0 2.8rem var(--purple),
+            inset 0 0 1.3rem var(--purple); 
+}
+.btn-container {
+    margin-top: 2em;
+    margin-bottom: 2em;
+    display: flex;
+    gap: 1.5em;
+}
+.btn {
+    display: inline-block;
+    padding: 0.75em 1.5em;
+    font-size: 1.2em;
+    color: white;
+    background-color: #333;
+    border: 2px solid white;
+    border-radius: 100px;
+    text-decoration: none;
+    transition: 0.3s;
+}
+.btn:hover {
+    background-color: #555;
+    box-shadow: 0 0 10px var(--light-green);
+    border: 2px solid var(--light-green);
 }
 
 
+#logo-large {
+    width: 17em;
+    height: 17em;
+}
+#name-heading {
+    font-size: 2.5em;
+    margin-top: 2em;
+
+}
+
+.bg-darkgreen {
+    background-color: var(--dark-green);
+}
+.bg-white {
+    background-color: white;
+}
+.bg-gray {
+    background-color: var(--blue-gray);
+}
+
+.full-height{
+    margin: 0;
+    height: 100vh;
+}
+
+@media (max-width: 700px) {
+    #logo-large {
+        width: 12em;
+        height: 12em;
+    }
+    #name-heading {
+        font-size: 2em;
+        margin-top: 1.5em;
+    }
+    .btn-container {
+        flex-direction: column;
+    }
+}
+footer {
+    text-align: center;
+    padding-top: 4em;
+    padding-bottom: 2em;
+    font-size: 0.9em;
+    color: white;
+    background-color: #050505;
+}
