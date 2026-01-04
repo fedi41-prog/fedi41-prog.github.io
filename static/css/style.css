@@ -18,13 +18,38 @@ body {
     background-color: black;
 }
 
+.top-nav {
+    padding: 1em 0;
+    text-align: right;
+}
+.top-nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 1em;
+    font-size: 1.2em;
+    transition: 0.3s;
+}
+.top-nav a:hover {
+    font-style: oblique 15deg;
+}
+
 .flex-vertical {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
 }
+.flex-horizontal {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
 
+.margin-side {
+    margin-left: 2em;
+    margin-right: 2em;
+}
 .white {
     color: white;
 }
@@ -69,7 +94,10 @@ body {
     border: 2px solid var(--light-green);
 }
 
-
+.logo-small {
+    width: 5em;
+    height: 5em;
+}
 #logo-large {
     width: 17em;
     height: 17em;
@@ -77,6 +105,10 @@ body {
 #name-heading {
     font-size: 2.5em;
     margin-top: 2em;
+}
+.name-heading {
+    font-size: 1.5em;
+    font-weight: normal;
 }
 
 .bg-darkgreen {
@@ -102,10 +134,11 @@ body {
 }
 
 .padding-mid {
-    padding: 5em;
+    padding: 2em;
 }
 
 @media (max-width: 66em) {
+    
     #logo-large {
         width: 12em;
         height: 12em;
@@ -118,6 +151,12 @@ body {
         flex-direction: column;
         margin-top: 1em;
         gap: 0.5em;
+    }
+}
+
+@media (max-width: 200px) {
+    html {
+        font-size: 10px;
     }
 }
 
