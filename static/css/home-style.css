@@ -43,7 +43,13 @@
 .heading-big {
     font-size: 3rem;
 
-    color: rgb(255, 230, 0);
+    color: rgb(255, 208, 0);
 
     font-family: Bungee, monospace;
+
+    transition: color 0.7s ease;
+}
+.heading-big:hover {
+
+    color: rgb(234, 0, 255);
 }
