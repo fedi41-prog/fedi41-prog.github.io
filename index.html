@@ -6,68 +6,64 @@
     <title>Document</title>
 
     <link rel="stylesheet" href="static/css/style.css">
+    <link rel="stylesheet" href="static/css/home-style.css">
+    <link rel="stylesheet" href="static/css/header.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playwrite+NZ+Basic:wght@100..400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bungee&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header class="bg-black flex-horizontal">
-        <div class="flex-horizontal">
-            <img src="static/img/logo.jpg" alt="logo" class="logo-small round margin-side">
-            <h1 class="name-heading white">Fedor Karev</h1>
-        </div>
-        <nav class="top-nav">
-            <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Projects</a></li>
-                <li><a href="#">Blog</a></li>
-                <li><a href="https://fedi41-prog.github.io/chat">Chat</a></li>
-            </ul>
+    <div id="header">
+
+        <nav class="header-nav nav-left">
+            <a href="#">Home</a>
+            <a href="#">Blog</a>
         </nav>
 
-    </header>
-    <main>
+
+        <div class="logo-desktop logo">
+            <img src="static/img/logo.png" alt="logo">
+        </div>
+        <div class="logo-mobile logo">
+            <img src="static/img/logo.png" alt="logo">
+        </div>
         
+
+        <div id="mobile-menu-button">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </div>
+        <div id="mobile-menu-items">
+            <a href="#">Home</a>
+            <a href="#">Blog</a>
+            <a href="#">Projects</a>
+            <a href="#">Skills</a>
+        </div>
+
+        <nav class="header-nav nav-right">
+            <a href="#">Projects</a>
+            <a href="#">Skills</a>
+        </nav>
+
+    </div>
+    <div id="intro">
         
-        <!-- Main Section 
-        <section class="bg-darkgreen min-full-height flex-vertical">
+        <h1 class="heading-big">Fedor Karev</h1>
+        <div id="scroll-down-indicator"></div>
 
-            <img id="logo-large" class="round glow" src="static/img/logo.jpg" alt="">
+    </div>
+    <div id="content">
 
-            <h1 id="name-heading" class="white">Fedor Karev</h1>
+        <div class="bouncy-text">Hey there!</div>
 
-            <div class="btn-container">
-                <a class="btn" href="#">Contact</a>
-                <a class="btn" href="#">Projects</a>
-                <a class="btn" href="#">Skills</a>
-                <a class="btn" href="#">Blog</a>
-                <a class="btn" href="https://fedi41-prog.github.io/chat">Chat</a>
-            </div>
+        My name is Fedor and I'm a programming enthusiast. I have a passion for learning new technologies and creating fun projects. 
 
-        </section>
-        -->
+    </div>
 
-
-
-        <section class="bg-white min-full-height padding-mid">
-
-
-
-            <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt tempore, sed natus vitae, sunt ducimus sint eligendi nihil autem, beatae quod inventore delectus suscipit vero cum doloremque earum dolorem ea?
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt tempore, sed natus vitae, sunt ducimus sint eligendi nihil autem, beatae quod inventore delectus suscipit vero cum doloremque earum dolorem ea?
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt tempore, sed natus vitae, sunt ducimus sint eligendi nihil autem, beatae quod inventore delectus suscipit vero cum doloremque earum dolorem ea?
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt tempore, sed natus vitae, sunt ducimus sint eligendi nihil autem, beatae quod inventore delectus suscipit vero cum doloremque earum dolorem ea?
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt tempore, sed natus vitae, sunt ducimus sint eligendi nihil autem, beatae quod inventore delectus suscipit vero cum doloremque earum dolorem ea?
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt tempore, sed natus vitae, sunt ducimus sint eligendi nihil autem, beatae quod inventore delectus suscipit vero cum doloremque earum dolorem ea?
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt tempore, sed natus vitae, sunt ducimus sint eligendi nihil autem, beatae quod inventore delectus suscipit vero cum doloremque earum dolorem ea?
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt tempore, sed natus vitae, sunt ducimus sint eligendi nihil autem, beatae quod inventore delectus suscipit vero cum doloremque earum dolorem ea?
-            </p>
-
-        </section>
-
-    </main>
-    <footer>
-        <strong>Fedor Karev © 2026</strong>
-        <p>This website is currently in work. More content coming soon!</p>
-    </footer>
+    <script src="static/js/header.js"></script>
+    <script src="static/js/scroll.js"></script>
 </body>
 </html>
