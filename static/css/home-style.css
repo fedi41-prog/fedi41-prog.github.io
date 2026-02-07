@@ -27,8 +27,8 @@
     color: white;
 }
 #scroll-down-indicator {
-    width: 50px;
-    height: 50px;
+    width: 1.6rem;
+    height: 1.6rem;
 
     rotate: 45deg;
 
@@ -37,7 +37,6 @@
 
     position: absolute;
     bottom: 40px;
-    font-size: 1.5rem;
     animation: bounce 2s infinite;
 }
 
